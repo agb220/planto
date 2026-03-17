@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 left-0 right-0 py-10 xl:py-16">
+    <header className="fixed top-0 left-0 right-0 py-10 xl:py-16 z-100">
       <div className="container">
         <div className="flex gap-5 justify-between items-center">
           <Link href="/" className="flex gap-3.5 items-center">
@@ -66,7 +66,7 @@ const Header = () => {
           </div>
 
           <div
-            className={`fixed inset-0 z-60 bg-[#0d0d0dc2] backdrop-blur-2xl flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            className={`fixed inset-0 z-100 bg-[#0d0d0dc2] backdrop-blur-2xl flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
               isMenuOpen
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-full"
