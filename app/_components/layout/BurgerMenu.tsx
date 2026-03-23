@@ -7,7 +7,7 @@ const BurgerMenu = (props: BurgerMenuProps) => {
   return (
     <button
       onClick={props.toggle}
-      className="relative z-110 flex h-10 w-10 flex-col items-end justify-center gap-1.5 focus:outline-none"
+      className="relative z-9991 flex h-10 w-10 flex-col items-end justify-center gap-1.5 focus:outline-none"
     >
       <span
         className={`h-0.5 bg-gray-300 transition-all duration-300 ease-in-out origin-center ${

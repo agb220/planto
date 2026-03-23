@@ -2,14 +2,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "../_icon";
+import { menulist } from "@/app/_constants/constants";
 
-const MobileMenu = ({
-  items,
-  closeMenu,
-}: {
+interface MobileMenuProps {
   items: any[];
   closeMenu: () => void;
-}) => {
+}
+
+const MobileMenu = (props: MobileMenuProps) => {
   const [openSubIndex, setOpenSubIndex] = useState<number | null>(null);
 
   const toggleSubmenu = (index: number) => {
@@ -18,7 +18,7 @@ const MobileMenu = ({
 
   return (
     <nav className="flex flex-col gap-4 md:gap-8 text-center w-full px-6">
-      {items.map((menuItem, index) => (
+      {props.items.map((menuItem, index) => (
         <div key={index} className="w-full flex flex-col items-center">
           {menuItem.subitem ? (
             <div className="flex flex-col items-center w-full">
@@ -49,7 +49,7 @@ const MobileMenu = ({
                     <li key={subIndex}>
                       <Link
                         href={sub.href}
-                        onClick={closeMenu}
+                        onClick={props.closeMenu}
                         className="text-2xl text-gray-400 hover:text-white transition-colors block duration-500"
                       >
                         {sub.label}
@@ -62,7 +62,7 @@ const MobileMenu = ({
           ) : (
             <Link
               href={menuItem.href}
-              onClick={closeMenu}
+              onClick={props.closeMenu}
               className="relative text-2xl xl:text-3xl font-bold text-white/90 hover:text-[#769f87] transition-all py-2    after:content-[''] after:absolute after:left-0 after:bottom-0 
                          after:h-0.5 after:w-full after:bg-[#769f87] 
                          after:scale-x-0 after:origin-center 
@@ -76,7 +76,7 @@ const MobileMenu = ({
       <div className="w-full flex justify-center">
         <Link
           href="/cart"
-          onClick={closeMenu}
+          onClick={props.closeMenu}
           className="relative w-fit text-2xl xl:text-3xl font-bold text-white/90 hover:text-[#769f87] transition-all py-2 
                after:content-[''] after:absolute after:left-0 after:bottom-0 
                after:h-0.5 after:w-full after:bg-[#769f87] 

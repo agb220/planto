@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 py-10 xl:py-16 z-100">
+    <header className="fixed top-0 left-0 right-0 py-10 xl:py-16 z-100 backdrop-blur-lg">
       <div className="container">
         <div className="flex gap-5 justify-between items-center">
           <Link href="/" className="flex gap-3.5 items-center">
@@ -64,37 +64,31 @@ const Header = () => {
               toggle={() => setIsMenuOpen(!isMenuOpen)}
             />
           </div>
+        </div>
+      </div>
 
-          <div
-            className={`fixed inset-0 z-100 bg-[#0d0d0dc2] backdrop-blur-2xl flex flex-col items-center transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-              isMenuOpen
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-full"
-            }`}
-          >
-            <div className="h-24 md:h-32 shrink-0" />
-            <div className="w-full flex-1 overflow-y-auto scrollbar-hide px-4">
-              <div className="min-h-full flex items-center justify-center py-10">
-                <MobileMenu
-                  items={menulist}
-                  closeMenu={() => setIsMenuOpen(false)}
-                />
-              </div>
-            </div>
-            <div className="w-full px-10 pt-6 pb-24 shrink-0 flex flex-col items-center">
-              <div className="relative w-full max-w-100">
-                <input
-                  type="text"
-                  className="w-full bg-white/90 border border-white/90 rounded-full py-3 md:py-4 px-6 text-gray-600 placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-[#769f87]/50 transition-all"
-                  placeholder="Find your plant..."
-                />
-                <SearchSvg className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-              </div>
-
-              <div className="mt-8 text-gray-500 text-xs tracking-widest uppercase">
-                Sustainable · Minimalist · Nature
-              </div>
-            </div>
+      <div
+        className={`fixed inset-0 z-999 overflow-y-auto bg-black flex flex-col transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] min-h-[99svh] ${
+          isMenuOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="h-24 md:h-32 shrink-0" />
+        <div className="px-6 flex flex-col items-center justify-center h-full mb-2">
+          <MobileMenu items={menulist} closeMenu={() => setIsMenuOpen(false)} />
+        </div>
+        <div className="w-full px-10 pb-20 shrink-0 flex flex-col items-center bg-black">
+          <div className="relative w-full max-w-md">
+            <input
+              type="text"
+              className="w-full bg-white/10 border border-white/20 rounded-full py-4 px-6 text-white placeholder:text-gray-500 focus:outline-none"
+              placeholder="Find your plant..."
+            />
+            <SearchSvg className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          </div>
+          <div className="mt-6 text-gray-500 text-[10px] tracking-[0.2em] uppercase">
+            Sustainable · Minimalist · Nature
           </div>
         </div>
       </div>
