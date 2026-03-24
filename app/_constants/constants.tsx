@@ -71,3 +71,14 @@ export const products = [
     price: "100",
   },
 ];
+
+export const reviews = [
+  {
+    id: "1",
+    name: "Alena Patel",
+    photo: "/images/clients/client1.png",
+    raiting: 4,
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  },
+];

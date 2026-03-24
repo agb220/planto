@@ -56,8 +56,8 @@ const Header = () => {
           </nav>
           <div className="flex items-center md:gap-15">
             <SearchInput className="hidden md:block" />
-            <Link href={"/"} className="hidden md:block">
-              <CartSvg />
+            <Link href={"/"} className="hidden md:block ">
+              <CartSvg className="hover:stroke-white" />
             </Link>
             <BurgerMenu
               isOpen={isMenuOpen}

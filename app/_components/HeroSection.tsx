@@ -3,9 +3,9 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Button from "./shared/Button";
-import ProductShortCard from "./shared/ProductShortCard";
-import { products } from "../_constants/constants";
 import ProductSlider from "./ProductSlider";
+import Review from "./shared/Review";
+import { products, reviews } from "../_constants/constants";
 
 const HeroSection = () => {
   const containerRef = useRef(null);
@@ -18,10 +18,7 @@ const HeroSection = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative w-full overflow-hidden pt-20"
-    >
+    <section ref={containerRef} className="relative w-full overflow-hidden">
       <motion.div
         style={{ y: backgroundY }}
         className="absolute inset-0 z-0  w-full min-h-full h-163"
@@ -51,6 +48,7 @@ const HeroSection = () => {
                 <Button variant="dark">Explore</Button>
               </div>
             </div>
+            <Review {...reviews[0]} />
           </div>
           <div className="max-w-125 overflow-hidden">
             <ProductSlider products={products} />
