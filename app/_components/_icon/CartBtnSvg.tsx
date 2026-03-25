@@ -15,7 +15,6 @@ const CartIconSvg = (props: SVGProps<SVGSVGElement>) => (
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
-      opacity={0.75}
     />
     <path
       d="M10.2 10.2V8.4a3.3 3.3 0 0 1 6.6 0v1.8"
@@ -23,7 +22,6 @@ const CartIconSvg = (props: SVGProps<SVGSVGElement>) => (
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
-      opacity={0.75}
     />
   </svg>
 );

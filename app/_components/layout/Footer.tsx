@@ -30,7 +30,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-col gap-10">
-              <div className="text-[28px] font-black text-white">
+              <div className="text-[24px] xl:text-[28px] font-black text-white">
                 Quick Link’s
               </div>
               <ul className="flex flex-col gap-6.5">
