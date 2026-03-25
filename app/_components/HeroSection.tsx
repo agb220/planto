@@ -51,7 +51,7 @@ const HeroSection = () => {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full overflow-hidden pb-25 cursor-default pt-10"
+      className="relative w-full overflow-x-hidden pb-25 cursor-default pt-10"
     >
       <motion.div
         style={{

@@ -36,7 +36,7 @@ export const products = [
   },
   {
     id: "3",
-    imageSrc: "/images/products/plant3.png",
+    imageSrc: "/images/products/plant5.png",
     title: "Calathea plant",
     subTitle: "For Small Decs Ai Plat",
     category: "Trendy House Plant",

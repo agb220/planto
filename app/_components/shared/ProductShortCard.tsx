@@ -20,7 +20,7 @@ const ProductShortCard = (props: ProductShortCardProps) => {
   return (
     <li className="list-none">
       <div className={cn("relative group", props.className)}>
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-lg max-h-128 h-128 z-30 pointer-events-none">
+        <div className="absolute -top-38 left-1/2 -translate-x-1/2 w-full max-h-128 h-128 z-30 pointer-events-none">
           <Image
             src={props.imageSrc}
             alt={props.title}
@@ -30,7 +30,8 @@ const ProductShortCard = (props: ProductShortCardProps) => {
           />
         </div>
         <div className="relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
-          <div className="relative max-w-lg h-161 px-12 pb-12 pt-2 flex flex-col justify-end">
+          <div className="relative w-full aspect-4/5 md:aspect-5/6 px-4 md:px-12 pb-12 pt-2 flex flex-col justify-end">
+            {/* SVG Background */}
             <div className="absolute inset-0 z-[-1]">
               <svg
                 viewBox="0 0 512 644"
@@ -51,20 +52,20 @@ const ProductShortCard = (props: ProductShortCardProps) => {
                   strokeWidth="2"
                 />
               </svg>
-              <div className="absolute inset-0 backdrop-blur-3xl z-[-2] rounded-[77px]" />
+              <div className="absolute inset-0 backdrop-blur-3xl z-[-2] rounded-[40px] md:rounded-[77px]" />
             </div>
             <div className="flex flex-col gap-4 mb-10">
               {props.isShowCategory && (
-                <p className="text-2xl text-white/50 font-medium">
+                <p className="text-xl md:text-2xl text-white/50 font-medium">
                   {props.category}
                 </p>
               )}
 
-              <h3 className="text-5xl font-bold text-white/75 tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-bold text-white/75 tracking-tight">
                 {props.title}
               </h3>
               {props.isShowDescription && (
-                <p className="text-2xl text-white/50 font-medium">
+                <p className="text-xl md:text-2xl text-white/50 font-medium">
                   {props.description}
                 </p>
               )}

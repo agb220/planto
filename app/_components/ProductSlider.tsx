@@ -1,6 +1,5 @@
 "use client";
 import useEmblaCarousel from "embla-carousel-react";
-
 import ProductShortCard from "./shared/ProductShortCard";
 import { cn } from "@/cn";
 import { DotButton, useDotButton } from "./shared/embla-carousel/EmblaDot";
@@ -21,7 +20,10 @@ interface ProductSliderProps {
 }
 
 const ProductSlider = (props: ProductSliderProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "center",
+    containScroll: false,
+  });
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
@@ -33,11 +35,11 @@ const ProductSlider = (props: ProductSliderProps) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="flex flex-col items-center gap-10 relative max-w-lg pt-20">
+    <div className="flex flex-col gap-10 relative pt-40 w-full max-w-[100vw]overflow-x-hidden">
       <div className="w-full" ref={emblaRef}>
-        <ul className="flex">
+        <ul className="flex m-0 p-0">
           {props.products.map((product, index) => (
-            <div key={index} className="flex-[0_0_100%] px-4">
+            <div key={index} className="flex-[0_0_80%] md:flex-[0_0_100%] px-4">
               <ProductShortCard isShowBtn isShowCategory {...product} />
             </div>
           ))}
@@ -54,7 +56,7 @@ const ProductSlider = (props: ProductSliderProps) => {
           <PrevButton onClick={onPrevButtonClick} />
         </div>
       )}
-      <div className="flex items-center gap-3 absolute bottom-10 z-30">
+      <div className="flex items-center gap-3 absolute left-24 md:left-10 bottom-10 z-30">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
