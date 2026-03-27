@@ -37,8 +37,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 
   const buttonStyles = {
     light:
-      "text-[28px] text-white rounded-[12px] border-2 border-white hover:text-[#769f87] hover:border-[#769f87] h-16 py-3.5 px-14",
-    dark: "text-[28px] text-white/75 rounded-[12px] border-2 border-white/75 hover:text-white hover:border-white h-16 py-3.5 px-14",
+      "text-[28px] text-white rounded-[12px] border-2 border-white hover:text-[#769f87] hover:border-[#769f87] h-12 md:h-16 py-3.5 px-14",
+    dark: "text-[28px] text-white/75 rounded-[12px] border-2 border-white/75 hover:text-white hover:border-white h-12 md:h-16 py-3.5 px-14",
     icon: "p-1 rounded-lg border border-white/75 hover:border-white text-white/75 hover:text-white focus:shadow-[0px_0px_0px_2px_#223f47]",
   };
 

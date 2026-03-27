@@ -36,8 +36,7 @@ const HeroSection = () => {
 
   const mouseMoveX = useTransform(smoothMouseX, [0, 1], ["2%", "-2%"]);
   const mouseMoveY = useTransform(smoothMouseY, [0, 1], ["2%", "-2%"]);
-
-  const scrollMoveY = useTransform(scrollY, [0, 1], ["0%", "15%"]);
+  const scrollMoveX = useTransform(scrollY, [0, 1], ["0%", "-4%"]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (isMobile || !containerRef.current) return;
@@ -51,22 +50,22 @@ const HeroSection = () => {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full overflow-x-hidden pb-25 cursor-default pt-10"
+      className="relative w-full overflow-x-hidden pb-10 md:pb-25 cursor-default pt-10"
     >
       <motion.div
         style={{
-          x: isMobile ? 0 : mouseMoveX,
-          y: isMobile ? scrollMoveY : mouseMoveY,
-          scale: 1.1,
+          x: isMobile ? scrollMoveX : mouseMoveX,
+          y: isMobile ? 0 : mouseMoveY,
+          scale: isMobile ? 1.05 : 1.1,
         }}
-        className="absolute inset-0 z-0 w-full h-full min-h-163"
+        className="absolute inset-0 z-0 w-full h-full"
       >
         <Image
           src="/images/hero/main-bg.png"
           alt="Breath Natural"
           fill
           priority
-          className="object-cover object-top origin-top"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-[#111311] via-80%" />
       </motion.div>
@@ -74,7 +73,7 @@ const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="flex justify-between gap-10 items-center flex-col xl:flex-row">
           <div className="flex flex-col gap-10 xl:gap-5">
-            <div className="h-screen md:h-[40vh] xl:h-screen flex flex-col justify-center gap-5 max-w-223">
+            <div className="pt-40 xl:pt-0 xl:h-screen flex flex-col justify-center gap-5 max-w-223">
               <h1 className="text-white/75 text-[clamp(60px,10vw,120px)] font-bold leading-[0.9] tracking-tighter">
                 Breath Natureal
               </h1>

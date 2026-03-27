@@ -17,50 +17,49 @@ const ProductCard = (props: ProductCardProps) => {
   const isReverse = props.className?.includes("flex-row-reverse");
 
   return (
-    <li className="relative w-full h-112 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[150px] overflow-visible">
+    <li className="relative w-full md:h-112 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[60px] md:rounded-[150px] overflow-visible">
       <div
         className={cn(
-          "flex flex-row items-center h-full w-full px-12",
+          "flex flex-col md:flex-row items-center h-full w-full pb-12 md:pb-0 px-4 md:px-8 xl:px-12",
           props.className
         )}
       >
-        <div className="basis-1/2 h-full relative flex items-center justify-center">
+        <div className="w-full md:basis-1/2 md:h-full relative flex items-center justify-center">
           <Image
             src={props.imageSrc}
             alt={props.title}
             height={800}
             width={800}
             className={cn(
-              "absolute object-contain h-[165%] w-auto max-w-none transition-all duration-500",
-              isReverse ? "-right-20" : "-left-20"
+              "md:absolute object-contain h-[80%] md:h-[120%] xl:h-[165%] md:w-auto md:max-w-none transition-all duration-500",
+              isReverse
+                ? "md:-right-40 xl:-right-20"
+                : "md:-left-40 xl:-left-20"
             )}
           />
         </div>
         <div
           className={cn(
             "basis-1/2 flex flex-col gap-4 z-10",
-            isReverse ? "pl-40" : "pr-5"
+            isReverse ? "md:pl-10 xl:pl-40" : "pr-5"
           )}
         >
-          <h3 className="text-white text-[38px] font-semibold leading-tight">
+          <h3 className="text-white text-[26px] xl:text-[38px] font-semibold leading-tight">
             {props.subTitle}
           </h3>
           <p className="text-white/80 text-[18px] font-medium leading-relaxed">
             {props.description}
           </p>
-          <div className="text-[#6DB952] text-[36px] font-bold">
+          <div className="text-[#6DB952] text-[24px] xl:text-[36px] font-bold">
             Rs. {props.price}/-
           </div>
           <div className="flex gap-4 mt-2">
-            <Button
-              variant="light"
-              className="px-10 py-3 text-xl rounded-2xl h-16"
-            >
+            <Button variant="light" className="px-10 py-3 text-xl rounded-2xl">
               Explore
             </Button>
             <Button
               variant="icon"
-              className="h-16 w-16 group border border-white/20 rounded-2xl flex items-center justify-center"
+              className="group border border-white/20 rounded-2xl flex items-center justify-center h-12 md:h-16"
             >
               <BigCardtSvg className="text-white w-8 h-8" />
             </Button>

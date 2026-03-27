@@ -54,7 +54,7 @@ const ProductShortCard = (props: ProductShortCardProps) => {
               </svg>
               <div className="absolute inset-0 backdrop-blur-3xl z-[-2] rounded-[40px] md:rounded-[77px]" />
             </div>
-            <div className="flex flex-col gap-4 mb-10">
+            <div className="flex flex-col gap-2 md:gap-4 mb-4 md:mb-10">
               {props.isShowCategory && (
                 <p className="text-xl md:text-2xl text-white/50 font-medium">
                   {props.category}

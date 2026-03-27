@@ -4,9 +4,9 @@ import { products } from "@/app/_constants/constants";
 
 const TrendyBlock = () => {
   return (
-    <div className="py-17 flex flex-col">
+    <div className="py-10 md:py-17 flex flex-col">
       <h2
-        className="text-white self-center w-fit text-[55px] font-semibold text-center relative px-10 py-4 inline-block mb-32.5
+        className="text-white self-center w-fit text-[38px] md:text-[40px] xl:text-[55px] font-semibold text-center relative px-10 py-4 inline-block mb-14 md:mb-20 xl:mb-32.5
           before:content-[''] before:absolute before:bottom-0 before:left-0 
           before:w-15 before:h-15 
           before:border-l-2 before:border-b-2 before:border-[#6DB952] 
@@ -21,12 +21,12 @@ const TrendyBlock = () => {
       >
         Our Trendy plants
       </h2>
-      <ul className="space-y-34 w-full">
+      <ul className="space-y-20 md:space-y-34 w-full">
         {products.slice(0, 2).map((product, index) => (
           <ProductCard
             {...product}
             key={index}
-            className={cn(index === 1 && "flex-row-reverse")}
+            className={cn(index === 1 && "md:flex-row-reverse")}
           />
         ))}
       </ul>
