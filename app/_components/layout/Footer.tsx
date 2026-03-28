@@ -7,7 +7,7 @@ export const socailMedia = ["Link1", "link2", "Link3"];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1B2316] py-22">
+    <footer className="bg-[#1B2316] py-10 md:py-16 xl:py-22">
       <div className="container">
         <div className="flex flex-col xl:flex-row justify-between gap-10 mb-10 xl:mb-20">
           <div className="flex flex-col md:flex-row gap-10 md:gap-30 xl:gap-50">
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-10">
-            <div className="text-[28px] font-black text-white">
+            <div className="text-[24px] xl:text-[28px] font-black text-white">
               For Every Update.
             </div>
             <div className="self-start">

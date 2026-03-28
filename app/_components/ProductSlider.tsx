@@ -46,13 +46,13 @@ const ProductSlider = (props: ProductSliderProps) => {
         </ul>
       </div>
       {!nextBtnDisabled && (
-        <div className="absolute z-50 bottom-[27%] right-[6%] pointer-events-auto">
+        <div className="absolute z-50 bottom-[27%] right-[14%] md:right-[6%] pointer-events-auto">
           <NextButton onClick={onNextButtonClick} />
         </div>
       )}
 
       {!prevBtnDisabled && (
-        <div className="absolute z-50 bottom-[27.5%] left-[4%] pointer-events-auto">
+        <div className="absolute z-50 bottom-[28%] md:bottom-[27.5%] left-[14%] md:left-[4%] pointer-events-auto">
           <PrevButton onClick={onPrevButtonClick} />
         </div>
       )}

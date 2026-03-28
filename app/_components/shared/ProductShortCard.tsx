@@ -30,7 +30,7 @@ const ProductShortCard = (props: ProductShortCardProps) => {
           />
         </div>
         <div className="relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
-          <div className="relative w-full aspect-4/5 md:aspect-5/6 px-4 md:px-12 pb-12 pt-2 flex flex-col justify-end">
+          <div className="relative w-full aspect-4/5 md:aspect-5/6 px-8 md:px-12 pb-12 pt-2 flex flex-col justify-end">
             {/* SVG Background */}
             <div className="absolute inset-0 z-[-1]">
               <svg
