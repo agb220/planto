@@ -39,7 +39,7 @@ const SearchInput = (props: SearchInputProps) => {
           ${isExpanded ? "text-white" : "text-gray-400"}
         `}
         >
-          <SearchSvg className="w-5 h-5" />
+          <SearchSvg className="w-5 h-5 hover:stroke-white" />
         </div>
         <input
           ref={inputRef}
