@@ -14,23 +14,36 @@ interface ProductShortCardProps {
   isShowPrice?: boolean;
   isShowCategory?: boolean;
   isShowDescription?: boolean;
+  classNameImg?: string;
+  classNameContent?: string;
 }
 
 const ProductShortCard = (props: ProductShortCardProps) => {
   return (
-    <li className="list-none">
-      <div className={cn("relative group", props.className)}>
-        <div className="absolute -top-38 left-1/2 -translate-x-1/2 w-full max-h-128 h-128 z-30 pointer-events-none">
+    <li className="list-none w-full max-w-112.5">
+      <div className={cn("relative group pt-50 md:pt-68", props.className)}>
+        <div
+          className={cn(
+            "absolute top-0 left-1/2 -translate-x-1/2 w-full h-90 md:h-120 z-30 pointer-events-none",
+            props.classNameImg
+          )}
+        >
           <Image
             src={props.imageSrc}
             alt={props.title}
             fill
-            className="object-contain transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
             priority
           />
         </div>
-        <div className="relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
-          <div className="relative w-full aspect-4/5 md:aspect-5/6 px-8 md:px-12 pb-12 pt-2 flex flex-col justify-end">
+        <div className="relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)] -mt-16 md:-mt-20">
+          <div
+            className={cn(
+              "relative w-full px-8 md:px-12 pb-12 pt-24 md:pt-32 flex flex-col justify-around",
+              "min-h-112.5 md:min-h-120",
+              props.classNameContent
+            )}
+          >
             {/* SVG Background */}
             <div className="absolute inset-0 z-[-1]">
               <svg
@@ -54,18 +67,19 @@ const ProductShortCard = (props: ProductShortCardProps) => {
               </svg>
               <div className="absolute inset-0 backdrop-blur-3xl z-[-2] rounded-[40px] md:rounded-[77px]" />
             </div>
-            <div className="flex flex-col gap-2 md:gap-4 mb-4 md:mb-10">
+            <div className="w-full flex flex-col gap-2 md:gap-4 justify-end">
               {props.isShowCategory && (
                 <p className="text-xl md:text-2xl text-white/50 font-medium">
                   {props.category}
                 </p>
               )}
 
-              <h3 className="text-3xl md:text-5xl font-bold text-white/75 tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-bold text-white/75 tracking-tight wrap-break-word">
                 {props.title}
               </h3>
+
               {props.isShowDescription && (
-                <p className="text-xl md:text-2xl text-white/50 font-medium">
+                <p className="text-lg md:text-xl text-white/50 font-medium line-clamp-3">
                   {props.description}
                 </p>
               )}
@@ -80,8 +94,8 @@ const ProductShortCard = (props: ProductShortCardProps) => {
                 </div>
               )}
               {props.isShowPrice && (
-                <div className="flex gap-2 justify-between items-center">
-                  <span className="text-white/75 text-[38px]">
+                <div className="flex gap-2 justify-between items-center mt-4 xl:mt-6">
+                  <span className="text-white/75 text-[32px] md:text-[42px] whitespace-nowrap">
                     Rs. {props.price}/-
                   </span>
                   <Button variant="icon">
