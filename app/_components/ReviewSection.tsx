@@ -23,7 +23,11 @@ const ReviewSection = () => {
           <div className="w-full overflow-hidden" ref={emblaRef}>
             <ul className="flex gap-8 m-0 p-0">
               {reviews.map((item, index) => (
-                <Review {...item} key={index} />
+                <Review
+                  review={item}
+                  key={index}
+                  classname="min-w-full md:min-w-lg"
+                />
               ))}
             </ul>
           </div>
