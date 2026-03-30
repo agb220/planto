@@ -17,7 +17,7 @@ const ProductCard = (props: ProductCardProps) => {
   const isReverse = props.className?.includes("flex-row-reverse");
 
   return (
-    <li className="relative w-full md:h-112 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[60px] md:rounded-[150px] overflow-visible">
+    <li className="relative w-full md:h-112 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[60px] md:rounded-[150px] overflow-visible select-none">
       <div
         className={cn(
           "flex flex-col md:flex-row items-center h-full w-full pb-12 md:pb-0 px-4 md:px-8 xl:px-12",
@@ -31,7 +31,7 @@ const ProductCard = (props: ProductCardProps) => {
             height={800}
             width={800}
             className={cn(
-              "md:absolute object-contain h-[80%] md:h-[120%] xl:h-[165%] md:w-auto md:max-w-none transition-all duration-500",
+              "md:absolute object-contain h-[80%] md:h-[120%] xl:h-[165%] md:w-auto md:max-w-none transition-all duration-500 pointer-events-none",
               isReverse
                 ? "md:-right-40 xl:-right-20"
                 : "md:-left-40 xl:-left-20"

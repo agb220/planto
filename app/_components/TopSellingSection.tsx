@@ -4,7 +4,7 @@ import Title from "./shared/Title";
 
 const TopSellingSection = () => {
   return (
-    <section className="container py-10 md:py-20 xl:py-42.5 mx-auto">
+    <section className="container py-20 md:py-26 xl:py-42 mx-auto">
       <div className="flex flex-col items-center">
         <Title title={"Our Top Selling"}></Title>
         <ul className="grid-cols-1 grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-8 md:gap-y-14 justify-items-center">

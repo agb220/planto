@@ -11,7 +11,7 @@ interface ReviewProps {
 
 const Review = (props: ReviewProps) => {
   return (
-    <li className="list-none bg-white/5 backdrop-blur-xl border border-white/10 rounded-[45px] max-w-102 p-4 md:p-11.25">
+    <li className="list-none bg-white/5 backdrop-blur-xl border border-white/10 rounded-[45px] max-w-102 p-4 md:p-11.25 min-w-102 select-none">
       <div className="flex flex-col gap-2">
         <div className="flex gap-7">
           <div>
@@ -20,6 +20,7 @@ const Review = (props: ReviewProps) => {
               alt="Client review"
               width={64}
               height={64}
+              className="pointer-events-none object-contain"
             />
           </div>
           <div>
