@@ -86,7 +86,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="xl:-mt-40">
-              <Review {...reviews[0]} />
+              <Review review={reviews[0]} classname="max-w-102" />
             </div>
           </div>
           <div className="max-w-125 overflow-x-hidden">

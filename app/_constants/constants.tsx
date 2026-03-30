@@ -95,4 +95,28 @@ export const reviews = [
     review:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
   },
+  {
+    id: "2",
+    name: "Maxn Ravall",
+    photo: "/images/clients/client2.png",
+    raiting: 5,
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  },
+  {
+    id: "3",
+    name: "Venely K",
+    photo: "/images/clients/client3.png",
+    raiting: 5,
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  },
+  {
+    id: "4",
+    name: "Lii thakur",
+    photo: "/images/clients/client4.png",
+    raiting: 5,
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  },
 ];

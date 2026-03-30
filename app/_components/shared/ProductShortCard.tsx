@@ -20,7 +20,7 @@ interface ProductShortCardProps {
 
 const ProductShortCard = (props: ProductShortCardProps) => {
   return (
-    <li className="list-none w-full max-w-112.5">
+    <li className="list-none w-full max-w-112.5 select-none">
       <div className={cn("relative group pt-50 md:pt-68", props.className)}>
         <div
           className={cn(
