@@ -35,8 +35,8 @@ const ProductSlider = (props: ProductSliderProps) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="flex flex-col gap-10 relative pt-40 w-full max-w-[100vw]overflow-x-hidden">
-      <div className="w-full" ref={emblaRef}>
+    <div className="flex flex-col gap-10 relative pt-40 w-full max-w-[100vw] overflow-hidden">
+      <div className="w-fulle" ref={emblaRef}>
         <ul className="flex m-0 p-0">
           {props.products.map((product, index) => (
             <div key={index} className="flex-[0_0_80%] md:flex-[0_0_100%] px-4">
@@ -46,7 +46,7 @@ const ProductSlider = (props: ProductSliderProps) => {
         </ul>
       </div>
       {!nextBtnDisabled && (
-        <div className="absolute z-50 bottom-[27%] right-[14%] md:right-[6%] pointer-events-auto">
+        <div className="absolute z-50 bottom-[27%] right-[14%] md:right-[10%] pointer-events-auto">
           <NextButton onClick={onNextButtonClick} />
         </div>
       )}

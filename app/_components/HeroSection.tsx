@@ -11,7 +11,7 @@ import {
 import Button from "./shared/Button";
 import ProductSlider from "./ProductSlider";
 import Review from "./shared/Review";
-import TrendyBlock from "./shared/TrendyBlock";
+import TrendyBlock from "./TrendyBlock";
 import { products, reviews } from "../_constants/constants";
 
 const HeroSection = () => {
@@ -89,7 +89,7 @@ const HeroSection = () => {
               <Review {...reviews[0]} />
             </div>
           </div>
-          <div className="max-w-125 overflow-hidden">
+          <div className="max-w-125 overflow-x-hidden">
             <ProductSlider products={products} />
           </div>
         </div>
