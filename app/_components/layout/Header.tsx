@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 py-10 xl:py-16 z-100 backdrop-blur-lg">
+    <header className="fixed top-0 left-0 right-0 py-8 z-100 backdrop-blur-lg">
       <div className="container">
         <div className="flex gap-5 justify-between items-center">
           <Link href="/" className="flex gap-3.5 items-center">
