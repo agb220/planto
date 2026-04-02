@@ -36,7 +36,7 @@ const ProductShortCard = (props: ProductShortCardProps) => {
             priority
           />
         </div>
-        <div className="relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)] -mt-16 md:-mt-20">
+        <div className="relative z-20 drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)] -mt-16 md:-mt-20">
           <div
             className={cn(
               "relative w-full px-8 md:px-12 pb-12 pt-24 md:pt-32 flex flex-col justify-around",

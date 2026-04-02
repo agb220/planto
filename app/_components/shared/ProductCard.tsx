@@ -55,13 +55,13 @@ const ProductCard = (props: ProductCardProps) => {
           </div>
           <div className="flex gap-4 mt-2">
             <Button variant="light" className="px-10 py-3 text-xl rounded-2xl">
-              Explore
+              By Now
             </Button>
             <Button
               variant="icon"
-              className="group border border-white/20 rounded-2xl flex items-center justify-center h-12 md:h-16"
+              className="group border border-white rounded-2xl flex items-center justify-center h-12 md:h-16 w-12 md:w-16 hover:border-[#769f87]"
             >
-              <BigCardtSvg className="text-white w-8 h-8" />
+              <BigCardtSvg className="text-white w-8 h-8 hover:text-[#769f87]" />
             </Button>
           </div>
         </div>
