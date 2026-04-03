@@ -24,8 +24,8 @@ const BestSection = () => {
             />
           </div>
           <div className="w-full flex justify-end">
-            <div className="w-full xl:w-1/2 px-6 md:px-10 md:pr-30 pb-16 xl:py-36 z-20 xl:max-w-163 text-center md:text-left">
-              <h2 className="text-xl md:text-[38px] font-semibold text-white/75 mb-6 md:mb-12">
+            <div className="w-full xl:w-1/2 px-6 md:px-10 md:pr-30 pb-10 xl:py-36 z-20 xl:max-w-163 text-center md:text-left">
+              <h2 className="text-2xl md:text-[38px] font-semibold text-white/75 mb-6 md:mb-12">
                 We Have Small And Best O2 Plants Collection’s
               </h2>
 
@@ -41,7 +41,7 @@ const BestSection = () => {
               </div>
 
               <div className="flex items-center justify-center md:justify-start">
-                <Button>Explore</Button>
+                <Button className="h-16">Explore</Button>
               </div>
             </div>
           </div>

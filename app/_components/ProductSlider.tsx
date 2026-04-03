@@ -35,7 +35,7 @@ const ProductSlider = (props: ProductSliderProps) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <div className="flex flex-col gap-10 relative pt-40 w-full max-w-[100vw] overflow-hidden">
+    <div className="flex flex-col gap-10 relative pt-20 md:pt-40 w-full max-w-[100vw] overflow-hidden">
       <div className="w-fulle" ref={emblaRef}>
         <ul className="flex m-0 p-0">
           {props.products.map((product, index) => (

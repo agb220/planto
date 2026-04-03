@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "../_icon";
-import { menulist } from "@/app/_constants/constants";
 
 interface MobileMenuProps {
   items: any[];

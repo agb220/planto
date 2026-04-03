@@ -2,15 +2,15 @@ export const menulist = [
   { item: "Home", href: "/" },
   {
     item: "Plants Type",
-    href: "/plants",
+    href: "/",
     subitem: [
-      { label: "Type1", href: "/type1" },
-      { label: "Type2", href: "/type2" },
-      { label: "Type3", href: "/type3" },
+      { label: "Type1", href: "/" },
+      { label: "Type2", href: "/" },
+      { label: "Type3", href: "/" },
     ],
   },
-  { item: "More", href: "/more" },
-  { item: "Contact", href: "/contact" },
+  { item: "More", href: "/" },
+  { item: "Contact", href: "/" },
 ];
 
 export const products = [
