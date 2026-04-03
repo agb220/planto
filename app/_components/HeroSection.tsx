@@ -73,7 +73,7 @@ const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="flex justify-between gap-10 items-center flex-col xl:flex-row">
           <div className="flex flex-col gap-16 xl:gap-5">
-            <div className="pt-40 xl:pt-0 xl:h-screen flex flex-col justify-center gap-5 max-w-223">
+            <div className="pt-40 xl:pt-0 xl:h-[90vh] flex flex-col justify-center gap-5 max-w-223">
               <h1 className="text-white/75 text-[clamp(60px,10vw,120px)] font-bold leading-[0.9] tracking-tighter">
                 Breath Natureal
               </h1>
